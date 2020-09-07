@@ -27,15 +27,3 @@ export const reducer = (todos, action) => {
 function newTodo(taskText) {
   return { task: taskText, completed: false, id: Date.now() };
 }
-
-// case "UPDATE_EDITING":
-//       return {
-//         ...state,
-//         completed: !state.completed
-//       };
-//     case "UPDATE_TITLE":
-//       return {
-//         ...state,
-//         title: action.payload,
-//         completed: false
-//       };

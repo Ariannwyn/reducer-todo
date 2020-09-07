@@ -4,10 +4,6 @@ import TodoList from "./components/TodoList";
 import "./components/Todo.css";
 
 function App() {
-  // you will need a place to store your state in this component.
-  // design `App` to be the parent component of your application.
-  // this component is going to take care of state, and any change handlers you need to work with your state
-  // const [todos, setTodos] = useState(initialState);
   const [taskText, setTaskText] = useState("");
   const [todos, dispatch] = useReducer(reducer, initialState);
   console.log(todos);
@@ -17,19 +13,6 @@ function App() {
     dispatch({ type: "ADD_TODO", payload: { taskText: taskText } });
     setTaskText("");
   }
-
-  // const clearTask = (e) => {
-  //   e.preventDefault();
-  //   return setTodos({
-  //     todos: todos.filter((item) => {
-  //       if (item.completed === true) {
-  //         return (item = undefined);
-  //       } else {
-  //         return item;
-  //       }
-  //     }),
-  //   });
-  // };
 
   return (
     <div>
